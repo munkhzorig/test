@@ -1,0 +1,440 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section id="main-slider" class="no-margin">
+        <div class="carousel slide wet-asphalt">
+            <ol class="carousel-indicators">
+                <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+                <li data-target="#main-slider" data-slide-to="1"></li>
+                <li data-target="#main-slider" data-slide-to="2"></li>
+                <li data-target="#main-slider" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active" style="background-image: url(/static/images/slider/bg1.jpg)">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="carousel-content centered">
+                                    <h2 class="animation animated-item-1">Powerful and Responsive Web Design</h2>
+                                    <p class="animation animated-item-2">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.item-->
+                <div class="item" style="background-image: url(/static/images/slider/bg2.jpg)">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="carousel-content center centered">
+                                    <h2 class="boxed animation animated-item-1">Clean, Crisp, Powerful and Responsive Web Design</h2>
+                                    <p class="boxed animation animated-item-2">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                                    <div class="boxed animation animated-item-3">
+                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                                    </div>
+                                    <br>
+                                    <a class="btn btn-md animation animated-item-3" href="#">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.item-->
+                <div class="item" style="background-image: url(/static/images/slider/bg3.jpg)">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content centered">
+                                    <h2 class="animation animated-item-1">Powerful and Responsive Web Design Theme</h2>
+                                    <p class="animation animated-item-2">Pellentesque habitant morbi tristique senectus et netus et malesuada fames</p>
+                                    <a class="btn btn-md animation animated-item-3" href="#">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                                <div class="centered">
+                                    <div class="embed-container">
+                                        <iframe src="//player.vimeo.com/video/69421653?title=0&amp;byline=0&amp;portrait=0&amp;color=a22c2f" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.item-->
+                <div class="item" style="background-image: url(/static/images/slider/bg6.jpg)">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content centered">
+                                    <h2 class="boxed animation animated-item-1">Хамгийн сүүлийн үеийн хамгийн их боломжтой</h2>
+                                    <p class="boxed animation animated-item-2">Pellentesque habitant morbi tristique senectus et netus et malesuada fames</p>
+                                    <a class="btn btn-md animation animated-item-3" href="#">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                                <div class="centered">
+                                    <div class="embed-container">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.item-->
+            </div><!--/.carousel-inner-->
+        </div><!--/.carousel-->
+        <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
+            <i class="icon-angle-left"></i>
+        </a>
+        <a class="next hidden-xs" href="#main-slider" data-slide="next">
+            <i class="icon-angle-right"></i>
+        </a>
+    </section><!--/#main-slider-->
+
+    <section id="services" class="emerald">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    {% if message %}
+                    <h2>{{ message }}</h2>
+                    {% else %}
+                    <h3>Бидэнтэй нэгдэнэ үү</h3>
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                    <input class="btn btn-default" type="submit" value="Бүртгүүлэх"/>
+                    </form>
+                    {% endif %}
+
+                </div><!--/.col-md-4-->
+                <div class="col-md-4 col-sm-6">
+                    <div class="media">
+                        <div class="pull-left">
+                            <i class="icon-facebook icon-md"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">Facebook Marketing</h3>
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
+                        </div>
+                    </div>
+                </div><!--/.col-md-4-->
+                <div class="col-md-4 col-sm-6">
+                    <div class="media">
+                        <div class="pull-left">
+                            <i class="icon-google-plus icon-md"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">Google Plus Marketing</h3>
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
+                        </div>
+                    </div>
+                </div><!--/.col-md-4-->
+            </div>
+        </div>
+    </section><!--/#services-->
+
+    <section id="normativ">
+<br>
+        <div class="container">
+            <div class="row durem">
+              <h1 class="text-center">БАРИЛГЫН ТӨСӨВ ЗОХИОХОД ХҮЧИН ТӨГӨЛДӨР МӨРДӨГДӨЖ БУЙ НОРМ, ДҮРМҮҮД</h1>
+
+           <table class="table table-bordered">
+               <thead>
+                  <tr>
+                      <th>№</th>
+                    <th>Нэр</th>
+                    <th style="width:10%">Норм</th>
+                      <th>Сайд</th>
+                      <th>Он</th>
+                      <th>Тушаал</th>
+                      <th style="width:20%">Тайлбар</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <tr>
+                      <td>1</td>
+                    <td>Барилгын үнэ бүрдлийн үндсэн дүрэм</td>
+                    <td>БНбД 81-94-12</td>
+                    <td>БХБС</td>
+                      <td>2012</td>
+                      <td>181</td>
+                      <td rowspan="2">Төсөв зохиох, тооцоо хийх аргачлалд үндэслэл болгон ашигласан дүрмүүд</td>
+                  </tr>
+                  <tr>
+                      <td>2</td>
+                    <td>Барилгын төсөв зохиох дүрэм</td>
+                    <td>БНбД 81-95-12</td>
+                    <td>БХБС</td>
+                      <td>2012</td>
+                      <td>181</td>
+                  </tr>
+                  <tr>
+                      <td>3</td>
+                    <td>Барилгын төсөв зохиоход зам, барилгын ажилчдын цагийн тарифт цалингийн жишиг</td>
+                    <td></td>
+                    <td>БХБС</td>
+                      <td>2009</td>
+                      <td>263</td>
+                      <td rowspan="3">Тооцоо хийхэд ашигласан тарифууд</td>
+                  </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Авто тээврийн жишиг тариф</td>
+                    <td></td>
+                    <td>ЗТАЖС</td>
+                      <td>2008</td>
+                      <td>136</td>
+                  </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Барилгын машин ашиглалтын нэг машин цагийн жишиг үнэ</td>
+                    <td></td>
+                    <td>ЗТБХБС</td>
+                      <td>2012</td>
+                      <td>18</td>
+                  </tr>
+                </tbody>
+            </table>
+              </div>
+
+            <div class="row norms">
+                <div class="col-sm-3">
+                    <h3>Төсвийн суурь нормын бааз бүрдүүлэлт</h3>
+                    <p>Монгол улсад хүчин төгөлдөр мөрдөгдөж буй нормууд, тэдгээрийн товч агуулга</p>
+                    <div class="btn-group">
+                        <a class="btn btn-danger" href="#scroller" data-slide="prev"><i class="icon-angle-left"></i></a>
+                        <a class="btn btn-danger" href="#scroller" data-slide="next"><i class="icon-angle-right"></i></a>
+                    </div>
+                    <p class="gap"></p>
+                </div>
+                <div class="col-md-9">
+                    <div id="scroller" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                <h4>“БАРИЛГА, САНТЕХНИКИЙН АЖЛЫН ТӨСВИЙН СУУРЬ НОРМ”</h4>
+                                <p>БХБС-ЫН 2006 ОНЫ 142 ДУГААР ТУШААЛААР БАТЛАГДСАН. НИЙТ 24 ЭМХТГЭЛ.</p>
+                                <div class="panel-group" id="accordion1">
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                      <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">
+                                          Барилга угсралт
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseOne1" class="panel-collapse collapse">
+                                      <p class="list-group-item">БНбД 81-01-06 <span class="glyphicon glyphicon-arrow-right"></span>Газар шороо</p>
+                                        <p class="list-group-item">БНбД 81-03-06 <span class="glyphicon glyphicon-arrow-right"></span>Өрөмдлөгө тэсэлгээ</p>
+                                        <p class="list-group-item">БНбД 81-05-06 <span class="glyphicon glyphicon-arrow-right"></span>Гадсан суурь</p>
+                                        <p class="list-group-item">БНбД 81-06-06 <span class="glyphicon glyphicon-arrow-right"></span>Бетон ба төмөр бетон цутгамал бүтээцүүд</p>
+                                        <p class="list-group-item">БНбД 81-07-06 <span class="glyphicon glyphicon-arrow-right"></span>Бетон ба төмөр бетон угсармал бүтээцүүд</p>
+                                        <p class="list-group-item">БНбД 81-08-06 <span class="glyphicon glyphicon-arrow-right"></span>Тоосго ба гулдмай бүтээц</p>
+                                        <p class="list-group-item">БНбД 81-09-06 <span class="glyphicon glyphicon-arrow-right"></span>Төмөр бүтээц</p>
+                                        <p class="list-group-item">БНбД 81-10-06 <span class="glyphicon glyphicon-arrow-right"></span>Модон бүтээц</p>
+                                        <p class="list-group-item">БНбД 81-11-06 <span class="glyphicon glyphicon-arrow-right"></span>Шал</p>
+                                        <p class="list-group-item">БНбД 81-12-06 <span class="glyphicon glyphicon-arrow-right"></span>Дээвэр</p>
+                                        <p class="list-group-item">БНбД 81-13-06 <span class="glyphicon glyphicon-arrow-right"></span>Барилгын бүтээц ба тоног төхөөрөмжийг зэврэлтээс хамгаалах</p>
+                                        <p class="list-group-item">БНбД 81-14-06 <span class="glyphicon glyphicon-arrow-right"></span>ХАА-н барилгад хэрэглэгдэх бүтээцүүд</p>
+                                        <p class="list-group-item">БНбД 81-15-06 <span class="glyphicon glyphicon-arrow-right"></span>Заслал</p>
+                                        <p class="list-group-item">БНбД 81-24-06 <span class="glyphicon glyphicon-arrow-right"></span>Дулаан тусгаарлалт</p>
+                                        <p class="list-group-item">БНбД 81-34-06 <span class="glyphicon glyphicon-arrow-right"></span>Үйлдвэрийн зуух яндан</p>
+                                        <p class="list-group-item">БНбД 81-35-06 <span class="glyphicon glyphicon-arrow-right"></span>Барилга байгууламжын шинэчлэлт</p>
+                                        <p class="list-group-item">БНбД 81-37-06 <span class="glyphicon glyphicon-arrow-right"></span>Зүлэгжүүлэлт ой хамгаалах зурвас</p>
+                                    </div>
+                                  </div>
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                      <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1">
+                                          Сантехник
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseTwo1" class="panel-collapse collapse">
+                                      <p class="list-group-item">БНбД 81-16-06 <span class="glyphicon glyphicon-arrow-right"></span>Дотор цэвэр ус</p>
+                                        <p class="list-group-item">БНбД 81-12-06 <span class="glyphicon glyphicon-arrow-right"></span>Дотор бохир ус</p>
+                                        <p class="list-group-item">БНбД 81-12-06 <span class="glyphicon glyphicon-arrow-right"></span>Дотор халаалт</p>
+                                        <p class="list-group-item">БНбД 81-12-06 <span class="glyphicon glyphicon-arrow-right"></span>Салхижуулалт-агаар сэлгэлт</p>
+                                        <p class="list-group-item">БНбД 81-12-06 <span class="glyphicon glyphicon-arrow-right"></span>Гадна цэвэр ус</p>
+                                        <p class="list-group-item">БНбД 81-12-06 <span class="glyphicon glyphicon-arrow-right"></span>Гадна бохир ус</p>
+                                        <p class="list-group-item">БНбД 81-12-06 <span class="glyphicon glyphicon-arrow-right"></span>Гадна дулаан хангамж</p>
+
+                                    </div>
+                                  </div>
+                                </div><!--/#accordion1-->
+                              </div><!--/.col-sm-4-->
+
+                                    <div class="col-xs-4">
+                                <h4>“БАРИЛГА, ЗАСВАРЫН АЖЛЫН ТӨСВИЙН СУУРЬ НОРМ”</h4>
+                                <p>БХБС-ЫН 2005 ОНЫ 80 ДУГААР ТУШААЛААР БАТЛАГДСАН. Нийт 17 эмхэтгэл</p>
+                                <div class="panel-group" id="accordion2">
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                      <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2">
+                                          Барилга угсралт
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseOne2" class="panel-collapse collapse">
+                                      <p class="list-group-item">БНбД 81-50-05 <span class="glyphicon glyphicon-arrow-right"></span>Газар шороо, суурь</p>
+                                        <p class="list-group-item">БНбД 81-51-05 <span class="glyphicon glyphicon-arrow-right"></span>Хана, хамар хана</p>
+                                        <p class="list-group-item">БНбД 81-52-05 <span class="glyphicon glyphicon-arrow-right"></span>Хучилт</p>
+                                        <p class="list-group-item">БНбД 81-53-05 <span class="glyphicon glyphicon-arrow-right"></span>Шал</p>
+                                        <p class="list-group-item">БНбД 81-54-05 <span class="glyphicon glyphicon-arrow-right"></span>Дээвэр</p>
+                                        <p class="list-group-item">БНбД 81-55-05 <span class="glyphicon glyphicon-arrow-right"></span>Хаалга цонх</p>
+                                        <p class="list-group-item">БНбД 81-56-05 <span class="glyphicon glyphicon-arrow-right"></span>Шат довжоо пийшин</p>
+                                        <p class="list-group-item">БНбД 81-57-05 <span class="glyphicon glyphicon-arrow-right"></span>Засал, чимэглэлийн ажил</p>
+                                        <p class="list-group-item">БНбД 81-58-05 <span class="glyphicon glyphicon-arrow-right"></span>Их засвар хийх барилгад угсармал төмөр бетон эдлэхүүнийг угсрах</p>
+                                        <p class="list-group-item">БНбД 81-59-05 <span class="glyphicon glyphicon-arrow-right"></span>Тохижилт бусад ажил</p>
+                                        <p class="list-group-item">БНбД 81-65-05 <span class="glyphicon glyphicon-arrow-right"></span>Нүх цоолох ховил гаргах</p>
+                                    </div>
+                                  </div>
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                      <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2">
+                                          Сантехник
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseTwo2" class="panel-collapse collapse">
+                                      <p class="list-group-item">БНбД 81-60-05 <span class="glyphicon glyphicon-arrow-right"></span>Тогоо ус халаагч дулааны зангилгаа</p>
+                                        <p class="list-group-item">БНбД 81-61-05 <span class="glyphicon glyphicon-arrow-right"></span>Цэвэр ус дулааны шугам хоолой</p>
+                                        <p class="list-group-item">БНбД 81-62-05 <span class="glyphicon glyphicon-arrow-right"></span>Халаах хэрэгсэл</p>
+                                        <p class="list-group-item">БНбД 81-63-05 <span class="glyphicon glyphicon-arrow-right"></span>Салхивч</p>
+                                        <p class="list-group-item">БНбД 81-64-05 <span class="glyphicon glyphicon-arrow-right"></span>Бохир усны шугам хоолой</p>
+                                    </div>
+                                  </div>
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                      <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree2">
+                                          Цахилгаан холбоо дохиолол
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseThree2" class="panel-collapse collapse">
+                                      <p class="list-group-item">БНбД 81-70-05 <span class="glyphicon glyphicon-arrow-right"></span>Цахилгаан угсралтын засвар</p>
+                                    </div>
+                                  </div>
+                                </div><!--/#accordion1-->
+                              </div><!--/.col-sm-4-->
+
+                                    <div class="col-xs-4">
+                                <h4>"БАРИЛГЫН ЦАХИЛГААНЫ АЖЛЫН УГСРАЛТ, ХОЛБООЖУУЛАЛТЫН ТӨСВИЙН СУУРЬ НОРМ"</h4>
+                                <p>ДБС-ЫН 2004 ОНЫ 177 ТООТ ТУШААЛААР БАТЛАГДСАН. НИЙТ 5 ЭМХТГЭЛ</p>
+                                <div class="panel-group" id="accordion3">
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                      <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseOne3">
+                                          Цахилгаан холбоо дохиолол
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseOne3" class="panel-collapse collapse">
+                                        <p class="list-group-item">БНбД 81-20-04 <span class="glyphicon glyphicon-arrow-right"></span>Орон сууц, олон нийтийн барилгын цахилгаан гэрэлтүүлэг</p>
+                                        <p class="list-group-item">БНбД 81-30-04 <span class="glyphicon glyphicon-arrow-right"></span>Цахилгаан дамжуулах шугам</p>
+                                        <p class="list-group-item">БНбД 81-38-04 <span class="glyphicon glyphicon-arrow-right"></span>Үйлдвэрийн барилгын цахилгаан угсралт</p>
+                                        <p class="list-group-item">БНбД 81-39-04 <span class="glyphicon glyphicon-arrow-right"></span>Барилгын автомат төхөөрөмж</p>
+                                        <p class="list-group-item">БНбД 81-40-04 <span class="glyphicon glyphicon-arrow-right"></span>Барилгын холбоожуулалт</p>
+                                    </div>
+                                  </div>
+                                </div><!--/#accordion3-->
+                              </div><!--/.col-sm-4-->
+                            </div>
+                        </div>
+
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <h4>"БАРИЛГЫН ХОЛБООЖУУЛАЛТЫН АЖЛЫН ТӨСВИЙН СУУРЬ НОРМ"</h4>
+                                        <p>ЗТБХБС-ЫН 2012 ОНЫ 110 ДУГААР ТУШААЛААР БАТЛАГДСАН. НИЙТ 1 ЭМХТГЭЛ</p>
+
+                                        <div class="portfolio-item">
+                                            <div class="item-inner">
+                                                 <p>БНбД 81-40-12 <span class="glyphicon glyphicon-arrow-right"></span>Барилгын холбоожуулалт</p>
+                                                <div class="overlay">
+                                                    <a class="preview btn btn-danger" title="Malesuada fames ac turpis egestas" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <h4>"БАРИЛГА, САНТЕХНИКИЙН АЖЛЫН ТӨСВИЙН СУУРЬ НОРМЫН НЭМЭЛТ"</h4>
+                                        <p>ДБС-ЫН 2003 ОНЫ 113 ДУГААР ТУШААЛААР БАТЛАГДСАН.</p>
+                                        <p class="list-group-item">БНбД 81-02-03</p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <h4>"БАРИЛГА, САНТЕХНИК, ЦАХИЛГААНЫ АЖЛЫН ТӨСВИЙН СУУРЬ НОРМЫН НЭМЭЛТ №2"</h4>
+                                        <p>БХБС-ЫН 2005 ОНЫ 21 ДҮГЭЭР ТУШААЛААР БАТЛАГДСАН.</p>
+                                        <p class="list-group-item">БНбД 81-02-05</p>
+                                    </div>
+                                </div>
+                            </div><!--/.item-->
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <h4>"БАРИЛГА, САНТЕХНИК, ЦАХИЛГААНЫ АЖЛЫН ТӨСВИЙН СУУРЬ НОРМЫН НЭМЭЛТ №3"</h4>
+                                        <p>БХБС-ЫН 2008 ОНЫ 55 ДУГААР ТУШААЛААР БАТЛАГДСАН.</p>
+                                        <p class="list-group-item">БНбД 81-02-08</p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <h4>"БАРИЛГА, САНТЕХНИКИЙН АЖЛЫН ТӨСВИЙН СУУРЬ НОРМЫН НЭМЭЛТ №4"</h4>
+                                        <p>БХБС-ЫН 2012 ОНЫ 113 ДУГААР ТУШААЛААР БАТЛАГДСАН.</p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <h4>"БАРИЛГА УГСРАЛТ, САНТЕХНИК, ЦАХИЛГААН, БАРИЛГА ЗАСВАРЫН АЖЛЫН ТӨСВИЙН СУУРЬ НОРМУУДЫН ЗАЛРУУЛГА"</h4>
+                                        <p>БХБС-ЫН 2008 ОНЫ 54 ДҮГЭЭР ТУШААЛААР БАТЛАГДСАН.</p>
+                                    </div>
+                                </div>
+                            </div><!--/.item-->
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+  </section>
+  <!-- /Career -->
+
+    <section id="testimonial" class="alizarin">
+    <br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center">
+                        <h2>What our clients say</h2>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    </div>
+                    <div class="gap"></div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <blockquote>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+                            </blockquote>
+                            <blockquote>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+                            </blockquote>
+                        </div>
+                        <div class="col-md-6">
+                            <blockquote>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+                            </blockquote>
+                            <blockquote>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#testimonial-->
+
+{% endblock %}
